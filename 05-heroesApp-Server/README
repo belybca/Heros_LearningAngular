@@ -1,0 +1,9 @@
+## Getting started
+
+1 - Install JSON Server
+
+2 - npm install -g json-server
+
+3 - Start JSON Server
+
+json-server --watch db.json
