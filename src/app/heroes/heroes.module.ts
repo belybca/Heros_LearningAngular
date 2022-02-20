@@ -14,6 +14,7 @@ import { HeroesRoutingModule } from './heroes-routing.module';
 import { MaterialModule } from '../material/material.module';
 import { HeroesCardsComponentComponent } from './component/heroes-cards-component/heroes-cards-component.component';
 import { ImagenPipe } from './pipes/imagen.pipe';
+import { DialogConfirmComponent } from './component/dialog-confirm/dialog-confirm.component';
 
 
 
@@ -25,7 +26,8 @@ import { ImagenPipe } from './pipes/imagen.pipe';
     ListadoComponent,
     BuscarComponent,
     HeroesCardsComponentComponent,
-    ImagenPipe
+    ImagenPipe,
+    DialogConfirmComponent
   ],
   imports: [
     CommonModule,

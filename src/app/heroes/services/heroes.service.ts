@@ -12,6 +12,7 @@ import { environment } from '../../../environments/environment';
 })
 export class HeroesService {
 
+ 
   private apiEndPoint: string = environment.apiEndPoint;
   constructor( private http : HttpClient ) { }
 
@@ -26,6 +27,19 @@ export class HeroesService {
 
   getSugerencias(key : string): Observable<Heroe[]>{
     return this.http.get<Heroe[]>(`${this.apiEndPoint}/heroes?q=${key}&_limit=6`);
+  }
+
+  addHeroe(heroe : Heroe): Observable<Heroe>{
+    return this.http.post<Heroe>(`${this.apiEndPoint}/heroes`,heroe);     //post para agregar
+
+  }
+  updateHeroe(heroe : Heroe): Observable<Heroe>{
+    return this.http.put<Heroe>(`${this.apiEndPoint}/heroes/${ heroe.id }`,heroe);   //put para actualizar
+
+  }
+  deleteHeroe(heroe : Heroe): Observable<any>{
+    return this.http.delete<any>(`${this.apiEndPoint}/heroes/${ heroe.id }`);    //delete para borrar
+
   }
 }
   
